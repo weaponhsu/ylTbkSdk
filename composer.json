@@ -16,6 +16,7 @@
             "url": "https://packagist.phpcomposer.com"
         }
     },
+    "minimum-stability": "dev",
     "autoload": {
         "psr-4": {
             "Tbk\\": "src/"
