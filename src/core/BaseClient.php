@@ -75,8 +75,6 @@ class BaseClient
         if ($this->app->config['sandbox'] === true)
             var_dump($resp);
 
-        var_dump($resp);
-
         if (isset($resp['error_response'])) {
             $code = isset($resp['error_response']['sub_code']) ? $resp['error_response']['sub_code'] : $resp['error_response']['code'];
             $msg = isset($resp['error_response']['sub_msg']) ? $resp['error_response']['sub_msg'] : $resp['error_response']['msg'];
