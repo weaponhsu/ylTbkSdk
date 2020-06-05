@@ -5,6 +5,7 @@ namespace Tbk;
 use Tbk\core\ContainerBase;
 use Tbk\provider\ItemProvider;
 use Tbk\provider\ShopProvider;
+use Tbk\provider\TaobaoProvider;
 use Tbk\provider\TokenProvider;
 use Tbk\provider\CouponProvider;
 use Tbk\provider\TpwdProvider;
@@ -33,6 +34,7 @@ class Tbk extends ContainerBase
         CouponProvider::class,
         ShopProvider::class,
         ItemProvider::class,
-        TpwdProvider::class
+        TpwdProvider::class,
+        TaobaoProvider::class
     ];
 }

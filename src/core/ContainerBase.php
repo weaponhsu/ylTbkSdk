@@ -78,4 +78,12 @@ class ContainerBase extends Container
         $this->state = $state;
     }
 
+    /**
+     * @param string $session
+     */
+    public function setSession($session)
+    {
+        $this->session = $session;
+    }
+
 }
