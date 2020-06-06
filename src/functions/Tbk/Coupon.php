@@ -6,7 +6,7 @@ namespace Tbk\functions\Tbk;
 
 use Tbk\core\BaseClient;
 
-class Order extends BaseClient
+class Coupon extends BaseClient
 {
     /**
      * taobao.tbk.coupon.get
@@ -14,7 +14,7 @@ class Order extends BaseClient
      * @return mixed
      * @throws \Tbk\exception\TbkException
      */
-    public function couponGet() {
+    public function get() {
         $this->app->params['method'] = 'taobao.tbk.coupon.get';
 
         return $this->curlPost();

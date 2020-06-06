@@ -1,19 +1,19 @@
 <?php
 
 
-namespace Tbk\provider\Tbk;
+namespace Tbk\provider\Tbk\Sc;
 
 
 use Tbk\core\Container;
-use Tbk\functions\Tbk\Order;
+use Tbk\functions\Tbk\Sc\Order;
 use Tbk\interfaces\Provider;
 
 class OrderProvider implements Provider
 {
+
     public function serviceProvider(Container $container)
     {
-        // TODO: Implement serviceProvider() method.
-        $container['tbk_order'] = function ($container) {
+        $container['sc_order'] = function ($container) {
             return new Order($container);
         };
     }

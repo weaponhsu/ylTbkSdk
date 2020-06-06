@@ -3,7 +3,8 @@
 namespace Tbk;
 
 use Tbk\core\ContainerBase;
-use Tbk\provider\Tbk\OrderProvider;
+use Tbk\provider\Tbk\CouponProvider;
+use Tbk\provider\Tbk\Sc\OrderProvider as ScOrderProvider;
 use Tbk\provider\Top\AuthProvider;
 use Tbk\provider\Tbk\ItemProvider;
 use Tbk\provider\Tbk\ShopProvider;
@@ -13,7 +14,6 @@ use Tbk\provider\Tbk\TpwdProvider;
 /**
  * Class Tbk
  * @package Tbk
- * @property CouponProvider coupon
  */
 class Tbk extends ContainerBase
 {
@@ -33,7 +33,8 @@ class Tbk extends ContainerBase
         ShopProvider::class,
         ItemProvider::class,
         TpwdProvider::class,
-        OrderProvider::class,
-        OpenUidOrderProvider::class
+        CouponProvider::class,
+        OpenUidOrderProvider::class,
+        ScOrderProvider::class
     ];
 }
