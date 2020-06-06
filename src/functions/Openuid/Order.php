@@ -1,7 +1,7 @@
 <?php
 
 
-namespace Tbk\functions\Taobao;
+namespace Tbk\functions\Openuid;
 
 
 use Tbk\core\BaseClient;
@@ -14,7 +14,7 @@ class Order extends BaseClient
      * @return mixed
      * @throws \Tbk\exception\TbkException
      */
-    public function getTradeByUid() {
+    public function getTradeBy() {
         $this->app->params['method'] = 'taobao.openuid.get.bytrade';
 
         return $this->curlPost();

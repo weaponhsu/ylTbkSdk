@@ -1,20 +1,21 @@
 <?php
 
 
-namespace Tbk\provider;
+namespace Tbk\provider\Tbk;
 
 
 use Tbk\core\Container;
-use Tbk\functions\Auth\Token;
+use Tbk\functions\Tbk\Shop;
 use Tbk\interfaces\Provider;
 
-class TokenProvider implements Provider
+class ShopProvider implements Provider
 {
+
     public function serviceProvider(Container $container)
     {
         // TODO: Implement serviceProvider() method.
-        $container['token'] = function ($container) {
-            return new Token($container);
+        $container['tbk_shop'] = function ($container) {
+            return new Shop($container);
         };
     }
 }

@@ -3,17 +3,16 @@
 namespace Tbk;
 
 use Tbk\core\ContainerBase;
-use Tbk\provider\ItemProvider;
-use Tbk\provider\ShopProvider;
-use Tbk\provider\TaobaoProvider;
-use Tbk\provider\TokenProvider;
-use Tbk\provider\CouponProvider;
-use Tbk\provider\TpwdProvider;
+use Tbk\provider\Tbk\OrderProvider;
+use Tbk\provider\Top\AuthProvider;
+use Tbk\provider\Tbk\ItemProvider;
+use Tbk\provider\Tbk\ShopProvider;
+use Tbk\provider\Openuid\OrderProvider as OpenUidOrderProvider;
+use Tbk\provider\Tbk\TpwdProvider;
 
 /**
  * Class Tbk
  * @package Tbk
- * @property TokenProvider auth
  * @property CouponProvider coupon
  */
 class Tbk extends ContainerBase
@@ -30,11 +29,11 @@ class Tbk extends ContainerBase
 
     protected $provider = [
         // 服务提供者
-        TokenProvider::class,
-        CouponProvider::class,
+        AuthProvider::class,
         ShopProvider::class,
         ItemProvider::class,
         TpwdProvider::class,
-        TaobaoProvider::class
+        OrderProvider::class,
+        OpenUidOrderProvider::class
     ];
 }

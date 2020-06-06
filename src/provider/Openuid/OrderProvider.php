@@ -1,20 +1,20 @@
 <?php
 
 
-namespace Tbk\provider;
+namespace Tbk\provider\Openuid;
 
 
 use Tbk\core\Container;
-use Tbk\functions\Taobao\Order;
+use Tbk\functions\Openuid\Order;
 use Tbk\interfaces\Provider;
 
-class TaobaoProvider implements Provider
+class OrderProvider implements Provider
 {
 
     public function serviceProvider(Container $container)
     {
         // TODO: Implement serviceProvider() method.
-        $container['taobao_order'] = function ($container) {
+        $container['open_uid_order'] = function ($container) {
             return new Order($container);
         };
     }

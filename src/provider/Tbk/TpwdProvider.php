@@ -1,20 +1,21 @@
 <?php
 
 
-namespace Tbk\provider;
+namespace Tbk\provider\Tbk;
 
 
 use Tbk\core\Container;
-use Tbk\functions\Tbk\Coupon;
+use Tbk\functions\Tbk\Tpwd;
 use Tbk\interfaces\Provider;
 
-class CouponProvider implements Provider
+class TpwdProvider implements Provider
 {
+
     public function serviceProvider(Container $container)
     {
         // TODO: Implement serviceProvider() method.
-        $container['coupon'] = function ($container) {
-            return new Coupon($container);
+        $container['tbk_tpwd'] = function ($container) {
+            return new Tpwd($container);
         };
     }
 }

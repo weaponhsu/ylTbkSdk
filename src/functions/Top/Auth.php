@@ -1,13 +1,13 @@
 <?php
 
 
-namespace Tbk\functions\Auth;
+namespace Tbk\functions\Top;
 
 
 use Tbk\core\BaseClient;
 use Tbk\exception\TbkException;
 
-class Token extends BaseClient
+class Auth extends BaseClient
 {
     /**
      * 登录

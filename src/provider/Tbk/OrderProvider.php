@@ -1,21 +1,20 @@
 <?php
 
 
-namespace Tbk\provider;
+namespace Tbk\provider\Tbk;
 
 
 use Tbk\core\Container;
-use Tbk\functions\Tbk\Shop;
+use Tbk\functions\Tbk\Order;
 use Tbk\interfaces\Provider;
 
-class ShopProvider implements Provider
+class OrderProvider implements Provider
 {
-
     public function serviceProvider(Container $container)
     {
         // TODO: Implement serviceProvider() method.
-        $container['shop'] = function ($container) {
-            return new Shop($container);
+        $container['tbk_order'] = function ($container) {
+            return new Order($container);
         };
     }
 }
